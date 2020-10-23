@@ -13,9 +13,12 @@
 		7F00FC8F254361E400AC909C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F00FC8D254361E400AC909C /* Main.storyboard */; };
 		7F00FC91254361E600AC909C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F00FC90254361E600AC909C /* Assets.xcassets */; };
 		7F00FC94254361E600AC909C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F00FC92254361E600AC909C /* LaunchScreen.storyboard */; };
+		B702A8F3E839295AC40DEE24 /* Pods_Caliper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3626CD6F0E90BE3AD579F1E6 /* Pods_Caliper.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3626CD6F0E90BE3AD579F1E6 /* Pods_Caliper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Caliper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E16FF502AA1957020809C34 /* Pods-Caliper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Caliper.debug.xcconfig"; path = "Target Support Files/Pods-Caliper/Pods-Caliper.debug.xcconfig"; sourceTree = "<group>"; };
 		7F00FC84254361E400AC909C /* Caliper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Caliper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F00FC87254361E400AC909C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F00FC89254361E400AC909C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		7F00FC90254361E600AC909C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F00FC93254361E600AC909C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F00FC95254361E700AC909C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4A23DC23C8A2359860EE559 /* Pods-Caliper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Caliper.release.xcconfig"; path = "Target Support Files/Pods-Caliper/Pods-Caliper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B702A8F3E839295AC40DEE24 /* Pods_Caliper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B1A995F28A1BD8E2FC384E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3626CD6F0E90BE3AD579F1E6 /* Pods_Caliper.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7F00FC7B254361E400AC909C = {
 			isa = PBXGroup;
 			children = (
 				7F00FC86254361E400AC909C /* Caliper */,
 				7F00FC85254361E400AC909C /* Products */,
+				99646AAE4DBCDCB2FF05F639 /* Pods */,
+				1B1A995F28A1BD8E2FC384E2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = Caliper;
 			sourceTree = "<group>";
 		};
+		99646AAE4DBCDCB2FF05F639 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E16FF502AA1957020809C34 /* Pods-Caliper.debug.xcconfig */,
+				B4A23DC23C8A2359860EE559 /* Pods-Caliper.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F00FC98254361E700AC909C /* Build configuration list for PBXNativeTarget "Caliper" */;
 			buildPhases = (
+				2492A570F5A271652494F079 /* [CP] Check Pods Manifest.lock */,
 				7F00FC80254361E400AC909C /* Sources */,
 				7F00FC81254361E400AC909C /* Frameworks */,
 				7F00FC82254361E400AC909C /* Resources */,
+				424B648B1D3029455E28E381 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2492A570F5A271652494F079 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Caliper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		424B648B1D3029455E28E381 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Caliper/Pods-Caliper-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Caliper/Pods-Caliper-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Caliper/Pods-Caliper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7F00FC80254361E400AC909C /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		7F00FC99254361E700AC909C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E16FF502AA1957020809C34 /* Pods-Caliper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		7F00FC9A254361E700AC909C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4A23DC23C8A2359860EE559 /* Pods-Caliper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
